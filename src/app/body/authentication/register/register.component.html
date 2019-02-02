@@ -1,0 +1,37 @@
+<div class="col-md-4 col-md-offset-4">
+  <form role="form">
+    <div class="col-md-10">
+      <div class="form-group">
+        <label for="email" class="" style="font-size: 20px; color: #440044; padding-bottom: 10px; padding-left: 10px; padding-top: 10px">Email:</label>
+        <input type="text" [(ngModel)]="email" id="email" tabindex="4" class="form-control" (input)="email">
+      </div>
+      <div class="form-group">
+        <label for="passwd" class="" style="font-size: 20px; color: #440044; padding-bottom: 10px; padding-left: 10px; padding-top: 10px">Wachtwoord:</label>
+        <input type="password" [(ngModel)]="passwd" id="passwd" tabindex="2" class="form-control " (input)="passwd">
+      </div>
+      <div class="form-group">
+        <label for="prov" class="" style="font-size: 20px; color: #440044; padding-bottom: 10px; padding-left: 10px; padding-top: 10px">Provincie:</label>
+        <input type="text" [(ngModel)]="province" id="prov" tabindex="5" class="form-control" (input)="province">
+      </div>
+      <div class="form-group">
+        <label for="city" class="" style="font-size: 20px; color: #440044; padding-bottom: 10px; padding-left: 10px; padding-top: 10px">Stad:</label>
+        <input type="text" [(ngModel)]="city" id="city" tabindex="6" class="form-control" (input)="city">
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="form-group">
+        <label for="street" class="" style="font-size: 20px; color: #440044; padding-bottom: 10px; padding-left: 10px; padding-top: 10px">Straat:</label>
+        <input type="text" [(ngModel)]="street" id="street" tabindex="7" class="form-control" (input)="street">
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="housenr" class="" style="font-size: 20px; color: #440044; padding-bottom: 10px; padding-left: 10px; padding-top: 10px">Huisnr:</label>
+        <input type="text" [(ngModel)]="housenr" id="housenr" tabindex="8" class="form-control" (input)="housenr">
+      </div>
+    </div>
+    <div class="col-md-offset-3 col-md-6">
+      <input type="submit" class="btn btn-primary" value="Registreer" (click)="onClick()" style="background-color: #440044; width: 100%; margin-top: 10px">
+    </div>
+  </form>
+</div>
