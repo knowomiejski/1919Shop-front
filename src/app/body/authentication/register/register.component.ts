@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UserModel} from '../../../models/user.model';
+import {RegistrationModel} from '../../../models/registration.model';
 import {RegisterService} from '../../../services/register.service';
 
 @Component({
@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() { }
 
   onClick() {
-    this.user = new UserModel(this.email, this.passwd, this.province, this.city, this.street, this.housenr);
+    this.user = new RegistrationModel(this.email, this.passwd, this.province, this.city, this.street, this.housenr);
     this.registerService.registerUser(this.user);
     this.submitted = true;
   }

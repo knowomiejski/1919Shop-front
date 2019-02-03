@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule, DomSanitizer} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './body/nav/nav.component';
 import { BodyComponent } from './body/body.component';
 import {RouterModule, Routes} from '@angular/router';
-import { CategoriesComponent } from './body/categories/categories.component';
 import { CartComponent } from './body/cart/cart.component';
 import { ItemlistComponent } from './body/itemlist/itemlist.component';
 import {FormsModule} from '@angular/forms';
@@ -17,7 +16,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 
 const appRoutes: Routes = [
-  {path: 'categories', component: CategoriesComponent },
+  {path: '', component: BodyComponent},
   {path: 'shop', component: ItemlistComponent},
   {path: 'cart', component: CartComponent }
 ];
@@ -30,7 +29,6 @@ const appRoutes: Routes = [
     BodyComponent,
     ItemComponent,
     ItemlistComponent,
-    CategoriesComponent,
     CartComponent
   ],
   imports: [

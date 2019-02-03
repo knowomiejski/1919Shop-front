@@ -1,11 +1,10 @@
 <nav class="navbar navbar-inverse" style="background-color: #404">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">1919Shop</a>
+      <a class="navbar-brand" [routerLink]="['/']">1919Shop</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a>Home</a></li>
-      <li><a [routerLink]="['/categories']">Categorie</a> </li>
+      <li><a [routerLink]="['/']">Home</a></li>
       <li><a [routerLink]="['/shop']">Alle </a> </li>
       <li><a [routerLink]="['/cart']">Winkelwagen</a> </li>
     </ul>

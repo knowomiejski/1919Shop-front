@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CredentialsModel} from '../../../models/credentials.model';
+import {UserModel} from '../../../models/user.model';
+import {AuthService} from '../../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,17 +9,19 @@ import {CredentialsModel} from '../../../models/credentials.model';
 })
 export class LoginComponent implements OnInit {
 
-  private credentials: CredentialsModel;
+  private user: UserModel;
   private login = '';
   private passwd = '';
+  private clicked = false;
 
-  constructor() { }
+  constructor(private authservice: AuthService) { }
 
   ngOnInit() {
   }
 
   onClickLogin() {
-    this.credentials = new CredentialsModel(this.login, this.passwd);
+    this.clicked = true;
+    this.user = new UserModel(-99, this.login, this.passwd);
+    this.authservice.logInViaForm(this.user);
   }
-
 }
